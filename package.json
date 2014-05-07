@@ -1,0 +1,40 @@
+{
+	"name": "generator-monkey",
+	"version": "0.0.1",
+	"description": "A nice little monkey that will do your job :)",
+	"license": "MIT",
+	"main": "app/index.js",
+	"repository": "leonardolessa/generator-monkey",
+	"author": {
+		"name": "Leonardo Lessa",
+		"email": "lrlessa@gmail.com",
+		"url": "https://github.com/leonardolessa"
+ 	},
+	"engines": {
+		"node": ">=0.10.0"
+	},
+	"scripts": {
+		"test": "mocha"
+	},
+	"files": [
+		"app"
+	],
+	"keywords": [
+		"yeoman-generator",
+		"monkey",
+		"stylus",
+		"gulp",
+		"compass",
+		"frontend"
+	],
+	"dependencies": {
+		"yeoman-generator": "~0.16.0",
+		"chalk": "~0.4.0"
+	},
+	"devDependencies": {
+		"mocha": "*"
+	},
+	"peerDependencies": {
+		"yo": ">=1.0.0"
+	}
+}

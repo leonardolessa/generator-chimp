@@ -1,0 +1,123 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html> <!--<![endif]-->
+
+<title><%= projectName %></title>
+
+<!-- Adaptações -->
+  <!--[if IE]>
+  <meta http-equiv="imagetoolbar" content="no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <![endif]-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-capable"          content="no">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title"            content="<%= projectName %>">
+
+<!-- Icones -->
+  <link rel="shortcut icon" href="favicon.ico">
+
+  <!-- iOS -->
+  <link rel="apple-touch-icon" href="img/touch-icon.png">
+
+  <!-- Win8 -->
+  <meta name="msapplication-TileImage" content="img/touch-icon.png">
+  <meta name="msapplication-TileColor" content="#000000">
+
+<!-- Informações -->
+  <meta name="robots"        content="all">
+  <meta name="description"   content="">
+  <meta name="keywords"      content="">
+  <meta name="author"        content="">
+  <meta name="rating"        content="General">
+  <meta name="date"          content="2013-12-31">
+  <meta name="revisit-after" content="1 days">
+  <meta name="copyright"     content="">
+  <meta name="contact"       content="">
+  <meta name="reply-to"      content="">
+  <meta name="generator"     content="Sublime Text 3">
+
+  <!-- Links -->
+  <link rel="canonical"                  href="">
+  <link rel="alternate" hreflang="pt-BR" href="">
+
+<!-- Open Graph | http://ogp.me -->
+  <meta property="og:site_name"    content="">
+  <meta property="og:title"        content="<%= projectName %>">
+  <meta property="og:type"         content=""> <!-- article|blog|book|profile|video.movie|video.episode|video.tv_show|video.other|website -->
+  <meta property="og:url"          content="">
+  <meta property="og:image"        content="">
+  <meta property="og:description"  content="">
+  <meta property="og:locale"       content="pt_BR">
+
+<!-- Facebook | https://developers.facebook.com/docs/technical-guides/opengraph/built-in-objects/ -->
+  <meta property="fb:page_id" content="00000">
+  <meta property="fb:app_id"  content="00000">
+  <meta property="fb:admins"  content="00000,00000">
+
+<!-- Twitter | https://dev.twitter.com/docs/cards -->
+  <meta name="twitter:card"          content=""> <!-- summary|photo|player -->
+  <meta name="twitter:site"          content="@">
+  <meta name="twitter:creator"       content="@">
+  <meta name="twitter:title"         content="<%= projectName %>">
+  <meta name="twitter:description"   content="">
+  <meta name="twitter:image"         content="">
+  <!-- Photo -->
+  <meta name="twitter:image"         content="">
+  <meta name="twitter:image:width"   content="">
+  <meta name="twitter:image:height"  content="">
+  <!-- Player -->
+  <meta name="twitter:player"        content="">
+  <meta name="twitter:player:width"  content="">
+  <meta name="twitter:player:height" content="">
+
+<!-- Google + -->
+  <link rel="author" href="">
+
+<!-- Modernizr -->
+ <script src="js/modernizr.js"></script>
+
+<!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<!-- Facebook Init -->
+<div id="fb-root"></div>
+<script>
+(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/pt_BR/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+<h1><%= projectName %></h1>
+
+<!-- JavaScript -->
+<!-- jQuery -->
+  <% if(jsOption.indexOf('jquery') !== -1) { %>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+  <% } if(jsOption.indexOf('zepto') !== -1) { %>
+  <script src="//zeptojs.com/zepto.min.js"></script>
+  <script>window.Zepto || document.write('<script src="js/zepto.min.js"><\/script>')</script>
+  <% } %>
+  <script src="js/scripts.js"></script>
+
+  <!-- Google Analytics - Don't forget to change the XXXXX -->
+  <script>
+    var _gaq = _gaq || [];_gaq.push(['_setAccount', 'UA-xxxxx-y']);_gaq.push(['_trackPageview']);
+    (function() {var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);})();
+  </script>
+</body>
+</html>

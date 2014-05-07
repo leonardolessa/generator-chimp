@@ -1,0 +1,15 @@
+{
+  "name": "<%= _.slugify(projectName) %>",
+  "version": "0.0.0",
+  "description": "<%= projectDescription %>",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "<%= authorName %>",
+  "license": "MIT",
+  "devDependencies": {
+    <%= devDependencies.join(',\n    ') %>
+  }
+}
+

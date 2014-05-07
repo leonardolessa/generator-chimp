@@ -1,0 +1,20 @@
+{
+	"name": "<%= _.slugify(projectName) %>",
+	"version": "1.0.0",
+	"authors": [
+	  "Leonardo Lessa <llessa@conrad-caine.com>"
+	],
+	"description": "Bower dependencies of ccaine generator",
+	"main": "index.html",
+	"license": "MIT",
+	"ignore": [
+	  "**/.*",
+	  "node_modules",
+	  "bower_components",
+	  "test",
+	  "tests"
+	],
+	"dependencies": {
+		"modernizr": "~2.7.1"
+	}
+}
