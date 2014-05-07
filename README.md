@@ -1,4 +1,4 @@
-# generator-monkey [![Build Status](https://secure.travis-ci.org/leonardolessa/generator-monkey.png?branch=master)](https://travis-ci.org/leonardolessa/generator-monkey)
+# generator-chimp [![Build Status](https://secure.travis-ci.org/leonardolessa/generator-chimp.png?branch=master)](https://travis-ci.org/leonardolessa/generator-chimp)
 
 > [Yeoman](http://yeoman.io) generator
 
@@ -23,16 +23,16 @@ $ npm install -g yo
 
 Yeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.
 
-To install generator-monkey from npm, run:
+To install generator-chimp from npm, run:
 
 ```
-$ npm install -g generator-monkey
+$ npm install -g generator-chimp
 ```
 
 Finally, initiate the generator:
 
 ```
-$ yo monkey
+$ yo chimp
 ```
 
 ### Getting To Know Yeoman

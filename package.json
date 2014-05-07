@@ -1,10 +1,10 @@
 {
-	"name": "monkey-generator",
+	"name": "generator-chimp",
 	"version": "0.0.1",
-	"description": "A nice little monkey that will do your job :)",
+	"description": "This nice little chimp that will do your job :)",
 	"license": "MIT",
 	"main": "app/index.js",
-	"repository": "leonardolessa/generator-monkey",
+	"repository": "leonardolessa/generator-chimp",
 	"author": {
 		"name": "Leonardo Lessa",
 		"email": "lrlessa@gmail.com",

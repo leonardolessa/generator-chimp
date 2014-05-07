@@ -21,24 +21,24 @@
 7 verbose parsed url   href: '.' }
 8 silly lockFile 3a52ce78- .
 9 verbose lock . C:\Users\llessa\AppData\Roaming\npm-cache\3a52ce78-.lock
-10 verbose tar pack [ 'C:\\Users\\llessa\\AppData\\Local\\Temp\\npm-6028-B_q9C3V-\\1399490396860-0.408238667761907\\tmp.tgz',
+10 verbose tar pack [ 'C:\\Users\\llessa\\AppData\\Local\\Temp\\npm-4072-CKhpuX33\\1399490475632-0.8571266627404839\\tmp.tgz',
 10 verbose tar pack   '.' ]
-11 verbose tarball C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz
+11 verbose tarball C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz
 12 verbose folder .
 13 info prepublish monkey-generator@0.0.1
 14 silly lockFile 1f1177db-tar tar://.
 15 verbose lock tar://. C:\Users\llessa\AppData\Roaming\npm-cache\1f1177db-tar.lock
-16 silly lockFile 00239861-396860-0-408238667761907-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz
-17 verbose lock tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz C:\Users\llessa\AppData\Roaming\npm-cache\00239861-396860-0-408238667761907-tmp-tgz.lock
+16 silly lockFile e77fdb9b-75632-0-8571266627404839-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz
+17 verbose lock tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz C:\Users\llessa\AppData\Roaming\npm-cache\e77fdb9b-75632-0-8571266627404839-tmp-tgz.lock
 18 silly lockFile 1f1177db-tar tar://.
 19 silly lockFile 1f1177db-tar tar://.
-20 silly lockFile 00239861-396860-0-408238667761907-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz
-21 silly lockFile 00239861-396860-0-408238667761907-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz
-22 verbose tar unpack C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz
-23 silly lockFile 20307ab0-396860-0-408238667761907-package tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\package
-24 verbose lock tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\package C:\Users\llessa\AppData\Roaming\npm-cache\20307ab0-396860-0-408238667761907-package.lock
-25 silly lockFile 00239861-396860-0-408238667761907-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz
-26 verbose lock tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz C:\Users\llessa\AppData\Roaming\npm-cache\00239861-396860-0-408238667761907-tmp-tgz.lock
+20 silly lockFile e77fdb9b-75632-0-8571266627404839-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz
+21 silly lockFile e77fdb9b-75632-0-8571266627404839-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz
+22 verbose tar unpack C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz
+23 silly lockFile cee62aa1-75632-0-8571266627404839-package tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\package
+24 verbose lock tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\package C:\Users\llessa\AppData\Roaming\npm-cache\cee62aa1-75632-0-8571266627404839-package.lock
+25 silly lockFile e77fdb9b-75632-0-8571266627404839-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz
+26 verbose lock tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz C:\Users\llessa\AppData\Roaming\npm-cache\e77fdb9b-75632-0-8571266627404839-tmp-tgz.lock
 27 silly gunzTarPerm modes [ '755', '644' ]
 28 silly gunzTarPerm extractEntry package.json
 29 silly gunzTarPerm modified mode [ 'package.json', 438, 420 ]
@@ -80,20 +80,20 @@
 65 silly gunzTarPerm modified mode [ 'app/templates/_index.html', 438, 420 ]
 66 silly gunzTarPerm extractEntry app/templates/_package.json
 67 silly gunzTarPerm modified mode [ 'app/templates/_package.json', 438, 420 ]
-68 silly lockFile 20307ab0-396860-0-408238667761907-package tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\package
-69 silly lockFile 20307ab0-396860-0-408238667761907-package tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\package
-70 silly lockFile 00239861-396860-0-408238667761907-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz
-71 silly lockFile 00239861-396860-0-408238667761907-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\tmp.tgz
+68 silly lockFile cee62aa1-75632-0-8571266627404839-package tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\package
+69 silly lockFile cee62aa1-75632-0-8571266627404839-package tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\package
+70 silly lockFile e77fdb9b-75632-0-8571266627404839-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz
+71 silly lockFile e77fdb9b-75632-0-8571266627404839-tmp-tgz tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\tmp.tgz
 72 verbose tar pack [ 'C:\\Users\\llessa\\AppData\\Roaming\\npm-cache\\monkey-generator\\0.0.1\\package.tgz',
-72 verbose tar pack   'C:\\Users\\llessa\\AppData\\Local\\Temp\\npm-6028-B_q9C3V-\\1399490396860-0.408238667761907\\package' ]
+72 verbose tar pack   'C:\\Users\\llessa\\AppData\\Local\\Temp\\npm-4072-CKhpuX33\\1399490475632-0.8571266627404839\\package' ]
 73 verbose tarball C:\Users\llessa\AppData\Roaming\npm-cache\monkey-generator\0.0.1\package.tgz
-74 verbose folder C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\package
-75 silly lockFile 20307ab0-396860-0-408238667761907-package tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\package
-76 verbose lock tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\package C:\Users\llessa\AppData\Roaming\npm-cache\20307ab0-396860-0-408238667761907-package.lock
+74 verbose folder C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\package
+75 silly lockFile cee62aa1-75632-0-8571266627404839-package tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\package
+76 verbose lock tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\package C:\Users\llessa\AppData\Roaming\npm-cache\cee62aa1-75632-0-8571266627404839-package.lock
 77 silly lockFile 930aee74-nkey-generator-0-0-1-package-tgz tar://C:\Users\llessa\AppData\Roaming\npm-cache\monkey-generator\0.0.1\package.tgz
 78 verbose lock tar://C:\Users\llessa\AppData\Roaming\npm-cache\monkey-generator\0.0.1\package.tgz C:\Users\llessa\AppData\Roaming\npm-cache\930aee74-nkey-generator-0-0-1-package-tgz.lock
-79 silly lockFile 20307ab0-396860-0-408238667761907-package tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\package
-80 silly lockFile 20307ab0-396860-0-408238667761907-package tar://C:\Users\llessa\AppData\Local\Temp\npm-6028-B_q9C3V-\1399490396860-0.408238667761907\package
+79 silly lockFile cee62aa1-75632-0-8571266627404839-package tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\package
+80 silly lockFile cee62aa1-75632-0-8571266627404839-package tar://C:\Users\llessa\AppData\Local\Temp\npm-4072-CKhpuX33\1399490475632-0.8571266627404839\package
 81 silly lockFile 930aee74-nkey-generator-0-0-1-package-tgz tar://C:\Users\llessa\AppData\Roaming\npm-cache\monkey-generator\0.0.1\package.tgz
 82 silly lockFile 930aee74-nkey-generator-0-0-1-package-tgz tar://C:\Users\llessa\AppData\Roaming\npm-cache\monkey-generator\0.0.1\package.tgz
 83 silly lockFile aef17c89-e-monkey-generator-0-0-1-package C:\Users\llessa\AppData\Roaming\npm-cache\monkey-generator\0.0.1\package
@@ -184,15 +184,15 @@
 141 silly publish   bugs: { url: 'https://github.com/leonardolessa/generator-monkey/issues' },
 141 silly publish   homepage: 'https://github.com/leonardolessa/generator-monkey',
 141 silly publish   _id: 'monkey-generator@0.0.1',
-141 silly publish   dist: { shasum: '2a9188c8eb2cdb5ffaeae62edbf143b7b92d9994' },
+141 silly publish   dist: { shasum: 'e3b0a47d715236a9dcfa322124322d847ce20d49' },
 141 silly publish   _from: '.' }
 142 verbose url raw monkey-generator
 143 verbose url resolving [ 'https://registry.npmjs.org/', './monkey-generator' ]
 144 verbose url resolved https://registry.npmjs.org/monkey-generator
-145 info trying registry request attempt 1 at 16:19:57
+145 info trying registry request attempt 1 at 16:21:15
 146 http PUT https://registry.npmjs.org/monkey-generator
 147 http 403 https://registry.npmjs.org/monkey-generator
-148 info trying registry request attempt 1 at 16:19:59
+148 info trying registry request attempt 1 at 16:21:18
 149 http PUT https://registry.npmjs.org/monkey-generator
 150 http 403 https://registry.npmjs.org/monkey-generator
 151 error publish Failed PUT 403
@@ -200,7 +200,7 @@
 152 error Changed: dist-tags.latest "0.0.0" -> "0.0.1"
 152 error Added: versions.0.0.1
 152 error Changed: readme "ERROR: No README data found!" -> "# generator-monkey [![Build Status](https://secure.travis-ci.org/leonardolessa/generator-monkey.png?branch=master)](https://travis-ci.org/leonardolessa/generator-monkey)\u000a\u000a> [Yeoman](http://yeoman.io) generator\u000a\u000a\u000a## Getting Started\u000a\u000a### What is Yeoman?\u000a\u000aTrick question. It's not a thing. It's this guy:\u000a\u000a![](http://i.imgur.com/JHaAlBJ.png)\u000a\u000aBasically, he wears a top hat, lives in your computer, and waits for you to tell him what kind of application you wish to create.\u000a\u000aNot every new computer comes with a Yeoman pre-installed. He lives in the [npm](https://npmjs.org) package repository. You only have to ask for him once, then he packs up and moves into your hard drive. *Make sure you clean up, he likes new and shiny things.*\u000a\u000a```\u000a$ npm install -g yo\u000a```\u000a\u000a### Yeoman Generators\u000a\u000aYeoman travels light. He didn't pack any generators when he moved in. You can think of a generator like a plug-in. You get to choose what type of application you wish to create, such as a Backbone application or even a Chrome extension.\u000a\u000aTo install generator-monkey from npm, run:\u000a\u000a```\u000a$ npm install -g generator-monkey\u000a```\u000a\u000aFinally, initiate the generator:\u000a\u000a```\u000a$ yo monkey\u000a```\u000a\u000a### Getting To Know Yeoman\u000a\u000aYeoman has a heart of gold. He's a person with feelings and opinions, but he's very easy to work with. If you think he's too opinionated, he can be easily convinced.\u000a\u000aIf you'd like to get to know Yeoman better and meet some of his friends, [Grunt](http://gruntjs.com) and [Bower](http://bower.io), check out the complete [Getting Started Guide](https://github.com/yeoman/yeoman/wiki/Getting-Started).\u000a\u000a\u000a## License\u000a\u000aMIT\u000a"
-152 error Changed: time.modified "2014-02-19T01:34:33.295Z" -> "2014-05-07T19:19:19.471Z"
+152 error Changed: time.modified "2014-02-19T01:34:33.295Z" -> "2014-05-07T19:20:38.296Z"
 152 error Added: time.0.0.1
 152 error Changed: author.url "https://github.com/joaoafrmartins" -> "https://github.com/leonardolessa"
 152 error Added: author.name

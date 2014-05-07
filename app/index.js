@@ -5,7 +5,7 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 
 
-var MonkeyGenerator = yeoman.generators.Base.extend({
+var ChimpGenerator = yeoman.generators.Base.extend({
 	init: function () {
 		this.pkg = require('../package.json');
 
@@ -49,7 +49,7 @@ var MonkeyGenerator = yeoman.generators.Base.extend({
 		this.log(chalk.yellow("                                                    "));
 
 		// replace it with a short and sweet description of your generator
-		this.log(chalk.magenta('You\'re using the Monkey Generator, this little monkey will do you job.'));
+		this.log(chalk.magenta('You\'re using the Chimp Generator, this little Chimp will do you job.'));
 
 		var prompts = [{
 				name: 'projectName',
@@ -69,7 +69,7 @@ var MonkeyGenerator = yeoman.generators.Base.extend({
 			{
 				type: 'confirm',
 				name: 'defaultOpt',
-				message: 'Do you want Monkey default configuration to your project?',
+				message: 'Do you want Chimp default configuration to your project?',
 				default: true
 			},
 			{
@@ -339,4 +339,4 @@ var MonkeyGenerator = yeoman.generators.Base.extend({
 	}
 });
 
-module.exports = MonkeyGenerator;
+module.exports = ChimpGenerator;

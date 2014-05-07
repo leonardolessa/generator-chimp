@@ -3,5 +3,5 @@ node_js:
   - '0.10'
 before_install:
   - currentfolder=${PWD##*/}
-  - if [ "$currentfolder" != 'generator-monkey' ]; then cd .. && eval "mv $currentfolder generator-monkey" && cd generator-monkey; fi
+  - if [ "$currentfolder" != 'generator-chimp' ]; then cd .. && eval "mv $currentfolder generator-chimp" && cd generator-chimp; fi
 
