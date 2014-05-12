@@ -1,6 +1,6 @@
 {
 	"name": "generator-chimp",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "This nice little chimp that will do your job :)",
 	"license": "MIT",
 	"main": "app/index.js",

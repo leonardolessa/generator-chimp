@@ -6,6 +6,12 @@ module.exports = function(grunt) {
         css: 'dev/css/'
     }
 
+
+    // ADD HERE YOUR SOURCE JS FILES, DON'T FORGET THE PATH.JS
+    var jsFiles = [
+        path.js + 'scripts.js'
+    ]
+
   // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -40,20 +46,29 @@ module.exports = function(grunt) {
                     'dev/js/zepto.min.js': [path.bower + 'zeptojs/src/zepto.js']
                 }
             }, <% } %>
-            js: {
+            jsdist: {
                 options: {
                     banner: '/*! <%%= pkg.name %> - v<%%= pkg.version %> | Scripts - ' +
                     '<%%= grunt.template.today("dd-mm-yyyy") %> */\n'
                 },
                 files: {
-                    'dist/js/scripts.js': [path.js + 'scripts.js']
+                    'dist/js/application.js': jsFiles
+                }
+            },
+            jsdev: {
+                options: {
+                    banner: '/*! <%%= pkg.name %> - v<%%= pkg.version %> | Scripts - ' +
+                    '<%%= grunt.template.today("dd-mm-yyyy") %> */\n'
+                },
+                files: {
+                    'dev/js/application.js': jsFiles
                 }
             }
         },       
         copy: { <% if(jsOption.indexOf('jquery') !== -1) { %>
             jquery: { 
                 src: path.bower + 'jquery/dist/jquery.min.js',
-                dest: 'dev/js/dist/jquery.min.js'
+                dest: 'dev/js/jquery.min.js'
             },
             jqueryBuild: {
                 src: 'dev/js/jquery.min.js',
@@ -111,12 +126,22 @@ module.exports = function(grunt) {
         compass: {
             dev: {
                 options: {
+                    httpPath: '/',
+                    imagesDir: 'dev/img/_src',
+                    generatedImagesDir: 'dev/img',
+                    httpImagesPath: '../img',
+                    httpGeneratedImagesPath: '../img',
                     sassDir: path.css + 'sass',
                     cssDir: path.css
                 }
             },
             dist: {
                 options: {
+                    httpPath: '/',
+                    imagesDir: 'dist/img/_src',
+                    generatedImagesDir: 'dist/img',
+                    httpImagesPath: '../img',
+                    httpGeneratedImagesPath: '../img',
                     sassDir: path.css + 'sass',
                     cssDir: 'dist/css',
                     outputStyle: 'compressed',
@@ -190,6 +215,14 @@ module.exports = function(grunt) {
             options: {
                 livereload: true
             },
+            js: {
+                files: 'dev/js/_src/*.js',
+                tasks: ['uglify:jsdev', 'notify:js']
+            },
+            img: {
+                files: 'dev/img/_src/**/*.{png,jpeg,gif,jpg}',
+                tasks: ['compass:dev']
+            },
             html: {
                 files: '**/*.html'
             },  <% if(cssOption.indexOf('less') !== -1) { %>
@@ -221,6 +254,12 @@ module.exports = function(grunt) {
                 options: {
                     title: 'Deploy',
                     message: 'Your dist folder is ready to go!'
+                }
+            },
+            js: {
+                options: {
+                    title: 'JS',
+                    message: 'Development application.js ready to test.'
                 }
             },
             server: {
@@ -266,6 +305,7 @@ module.exports = function(grunt) {
             'less:dev', <% } if(cssOption.indexOf('sass') !== -1) { %>
             'compass:dev', <% } if(cssOption.indexOf('stylus') !== -1) { %>
             'stylus:dev', <% } %>
+            'uglify:jsdev',
             'connect',
             'notify:server',
             'watch'
@@ -274,7 +314,7 @@ module.exports = function(grunt) {
     grunt.registerTask(
         'build', 
         [   
-            'uglify:js', <% if(jsOption.indexOf('jquery') !== -1) { %>
+            'uglify:jsdist', <% if(jsOption.indexOf('jquery') !== -1) { %>
             'copy:jqueryBuild', <% } %>
             'copy:html',
             'copy:fonts',

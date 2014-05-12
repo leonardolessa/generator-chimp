@@ -3,3 +3,12 @@
 // @import '_import'
 
 @import "compass/reset";
+
+// sprite setup
+$icons-sprite-dimensions: true;
+$icons-spacing: 10px;
+$icon-clean-up: true;
+
+//@import "compass/utilities/sprites";
+@import "icons/*.png";
+@include all-icons-sprites;

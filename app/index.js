@@ -45,217 +45,217 @@ var ChimpGenerator = yeoman.generators.Base.extend({
 		this.log(chalk.yellow("             | |     \\'."));
 		this.log(chalk.yellow("              \\ '....' |"));
 		this.log(chalk.yellow("               '.,___.'"));
-		this.log(chalk.yellow("===================================================="));
 		this.log(chalk.yellow("                                                    "));
 
 		// replace it with a short and sweet description of your generator
-		this.log(chalk.magenta('You\'re using the Chimp Generator, this little Chimp will do you job.'));
+		this.log(chalk.magenta('You\'re using the Chimp Generator, this little Chimp will do your job.'));
 
 		var prompts = [{
-				name: 'projectName',
-				message: 'What do you want to call your project?',
-				default: 'myProject'
+			name: 'projectName',
+			message: 'What do you want to call your project?',
+			default: 'myProject'
+		},
+		{
+			name: 'projectDescription',
+			message: 'Tell me a brief description of the project',
+			default: 'Project Description'	
+		},
+		{
+			name: 'authorName',
+			message: "What's your name?",
+			default: 'author'
+		},
+		{
+			type: 'confirm',
+			name: 'defaultOpt',
+			message: 'Do you want Chimp default configuration to your project?',
+			default: true
+		},
+		{
+			type: 'list',
+			name: 'cssOption',
+			message: 'What CSS preprocessor do you want to use?',
+			choices: [{
+				name: "SASS (with Compass)",
+				value: "sass"
 			},
 			{
-				name: 'projectDescription',
-				message: 'Tell me a brief description of the project',
-				default: 'Project Description'	
+				name: "LESS (with Less Hat)",
+				value: "less"
 			},
 			{
-				name: 'authorName',
-				message: "What's your name?",
-				default: 'author'
+				name: "STYLUS (with NIB)",
+				value: "stylus"
 			},
 			{
-				type: 'confirm',
-				name: 'defaultOpt',
-				message: 'Do you want Chimp default configuration to your project?',
-				default: true
+				name: "None",
+				value: "none"
+			}],
+			when: function( props ) {
+					return props.defaultOpt == false;
+			}
+		},
+		{
+			type: 'list',
+			name: 'jsOption',
+			message: 'What JS library do you prefer?',
+			choices: [{
+				name: "jQuery (1.*)",
+				value: "jquery"
 			},
 			{
-				type: 'list',
-				name: 'cssOption',
-				message: 'What CSS preprocessor do you want to use?',
-				choices: [{
-						name: "SASS (with Compass)",
-						value: "sass"
-				},
-				{
-						name: "LESS (with Less Hat)",
-						value: "less"
-				},
-				{
-						name: "STYLUS (with NIB)",
-						value: "stylus"
-				},
-				{
-						name: "None",
-						value: "none"
-				}],
-				when: function( props ) {
-						return props.defaultOpt == false;
-				}
+				name: "Zepto",
+				value: "zepto"
 			},
 			{
-				type: 'list',
-				name: 'jsOption',
-				message: 'What JS library do you prefer?',
-				choices: [{
-						name: "jQuery (1.*)",
-						value: "jquery"
-				},
-				{
-						name: "Zepto",
-						value: "zepto"
-				},
-				{
-						name: "None",
-						value: "none"
-				}],
-				when: function( props ) {
-						return props.defaultOpt == false;
-				}
-			},
-			{
-				type: 'confirm',
-				name: 'jsHint',
-				message: 'Do you want Grunt to use jsHint? (Y)',
-				default: true,
-				when: function( props ) {
-						return props.defaultOpt == false;
-				}
-			},
-			{
-				type: 'confirm',
-				name: 'jsRespond',
-				message: 'Your project will be responsive? (Y)',
-				default: true,
-				when: function( props ) {
-						return props.defaultOpt == false;
-				}
-			},
-			{
-				type: 'confirm',
-				name: 'jsPlaceholder',
-				message: 'Are you going to use placeholders for old IE\'s? (Y)',
-				default: true,
-				when: function( props ) {
-						return props.defaultOpt == false;
-				}
-			}];
+				name: "None",
+				value: "none"
+			}],
+			when: function( props ) {
+				return props.defaultOpt == false;
+			}
+		},
+		{
+			type: 'confirm',
+			name: 'jsHint',
+			message: 'Do you want Grunt to use jsHint? (Y)',
+			default: true,
+			when: function( props ) {
+				return props.defaultOpt == false;
+			}
+		},
+		{
+			type: 'confirm',
+			name: 'jsRespond',
+			message: 'Your project will be responsive? (Y)',
+			default: true,
+			when: function( props ) {
+				return props.defaultOpt == false;
+			}
+		},
+		{
+			type: 'confirm',
+			name: 'jsPlaceholder',
+			message: 'Are you going to use placeholders for old IE\'s? (Y)',
+			default: true,
+			when: function( props ) {
+				return props.defaultOpt == false;
+			}
+		}];
 
 		this.prompt(prompts, function (props) {
-		    this.defaultOpt = props.defaultOpt;
-		    this.projectName = props.projectName;
-		    this.authorName = props.authorName;
-		    this.projectDescription = props.projectDescription;
-		    var that = this;
+		this.defaultOpt = props.defaultOpt;
+		this.projectName = props.projectName;
+		this.authorName = props.authorName;
+		this.projectDescription = props.projectDescription;
+		var that = this;
 
-		    if(this.defaultOpt == false) {
-		        this.cssOption = props.cssOption;
-		        this.jsOption = props.jsOption;
-		        this.jsRespond = props.jsRespond;
-		        this.jsPlaceholder = props.jsPlaceholder;
-		        this.jsHint = props.jsHint;
+		if(this.defaultOpt == false) {
+		    this.cssOption = props.cssOption;
+		    this.jsOption = props.jsOption;
+		    this.jsRespond = props.jsRespond;
+		    this.jsPlaceholder = props.jsPlaceholder;
+		    this.jsHint = props.jsHint;
+		}
+		else {
+		    this.cssOption = 'sass';
+		    this.jsOption = 'jquery';
+		    this.jsRespond = false;
+		    this.jsPlaceholder = false;
+		    this.jsHint = true;
+		}
+
+		this.devDependencies = (function() {
+		    var optionalDependencies = {
+		        less: '"grunt-contrib-less": "~0.8.3"',
+		        sass: '"grunt-contrib-compass": "~0.7.0"',
+		        stylus: '"grunt-contrib-stylus": "~0.11.0"',
+		        nib: '"nib": "~1.0.0"',
+		        jshint: '"grunt-contrib-jshint": "~0.8.0"',
+		        cssmin: '"grunt-contrib-cssmin": "~0.7.0"',
+		    },
+		    devDependencies = [
+		        '"grunt": "~0.4.2"',
+		        '"grunt-notify": "~0.2.16"',
+		        '"grunt-contrib-uglify": "~0.2.7"',
+		        '"grunt-contrib-watch": "~0.5.3"',
+		        '"grunt-contrib-connect": "~0.6.0"',
+		        '"grunt-contrib-copy": "~0.5.0"',
+		        '"grunt-contrib-imagemin": "~0.4.0"'
+		    ];
+
+		    if(that.cssOption.indexOf('sass') !== -1) {
+		        devDependencies.push(optionalDependencies.sass);
 		    }
-		    else {
-		        this.cssOption = 'sass';
-		        this.jsOption = 'jquery';
-		        this.jsRespond = false;
-		        this.jsPlaceholder = false;
-		        this.jsHint = true;
+
+		    if(that.cssOption.indexOf('less') !== -1) {
+		        devDependencies.push(optionalDependencies.less);
 		    }
 
-		    this.devDependencies = (function() {
-		        var optionalDependencies = {
-		            less: '"grunt-contrib-less": "~0.8.3"',
-		            sass: '"grunt-contrib-compass": "~0.7.0"',
-		            stylus: '"grunt-contrib-stylus": "~0.11.0"',
-		            nib: '"nib": "~1.0.0"',
-		            jshint: '"grunt-contrib-jshint": "~0.8.0"',
-		            cssmin: '"grunt-contrib-cssmin": "~0.7.0"',
-		        },
-		            devDependencies = [
-		                '"grunt": "~0.4.2"',
-		                '"grunt-notify": "~0.2.16"',
-		                '"grunt-contrib-uglify": "~0.2.7"',
-		                '"grunt-contrib-watch": "~0.5.3"',
-		                '"grunt-contrib-connect": "~0.6.0"',
-		                '"grunt-contrib-copy": "~0.5.0"',
-		                '"grunt-contrib-imagemin": "~0.4.0"'
-		            ];
+		    if(that.cssOption.indexOf('stylus') !== -1) {
+		        devDependencies.push(optionalDependencies.stylus);
+		        devDependencies.push(optionalDependencies.nib);
+		    }
 
-		        if(that.cssOption.indexOf('sass') !== -1) {
-		            devDependencies.push(optionalDependencies.sass);
-		        }
+		    if(that.cssOption.indexOf('none') !== -1) {
+		        devDependencies.push(optionalDependencies.cssmin)
+		    }
 
-		        if(that.cssOption.indexOf('less') !== -1) {
-		            devDependencies.push(optionalDependencies.less);
-		        }
+		    if(that.jsHint) {
+		        devDependencies.push(optionalDependencies.jshint);
+		    }
 
-		        if(that.cssOption.indexOf('stylus') !== -1) {
-		            devDependencies.push(optionalDependencies.stylus);
-		            devDependencies.push(optionalDependencies.nib);
-		        }
+		    return devDependencies;
 
-		        if(that.cssOption.indexOf('none') !== -1) {
-		            devDependencies.push(optionalDependencies.cssmin)
-		        }
+		}());
 
-		        if(that.jsHint) {
-		            devDependencies.push(optionalDependencies.jshint);
-		        }
-
-		        return devDependencies;
-
-		    }());
-
-		    done();
-		  }.bind(this));
+		done();
+		}.bind(this));
 	},
 
 	packageJSON: function() {
-	  this.template('_package.json', 'package.json');
+		this.template('_package.json', 'package.json');
 	},
 
 	git: function() {
-	  this.copy('gitignore', '.gitignore');
-	  this.copy('gitattributes', '.gitattributes');
+		this.copy('gitignore', '.gitignore');
+		this.copy('gitattributes', '.gitattributes');
 	},	
 
 	bower: function() {
-	  this.copy('bowerrc', '.bowerrc');
-	  this.copy('_bower.json', 'bower.json');
+		this.copy('bowerrc', '.bowerrc');
+		this.copy('_bower.json', 'bower.json');
 	},	
 
 	editorConfig: function() {
-	  this.copy('editorconfig', '.editorconfig');
+		this.copy('editorconfig', '.editorconfig');
 	},	
 
 	favicon: function() {
-	  this.copy('favicon.ico', 'dev/favicon.ico');
+		this.copy('favicon.ico', 'dev/favicon.ico');
 	},	
 
 	app: function() {
-	  console.log("Creating main folders...");
+		console.log("Creating main folders...");
 
-	  this.mkdir('dist');
-	  this.mkdir('dev');
+		this.mkdir('dist');
+		this.mkdir('dev');
 
-	  // build folders
+		// build folders
 
-	  this.mkdir('dist/css');
-	  this.mkdir('dist/js');
-	  this.mkdir('dist/fonts');
-	  this.mkdir('dist/img');
+		this.mkdir('dist/css');
+		this.mkdir('dist/js');
+		this.mkdir('dist/fonts');
+		this.mkdir('dist/img');
 
-	  // dev folders
+		// dev folders
 
-	  this.mkdir('dev/css');
-	  this.mkdir('dev/js');
-	  this.mkdir('dev/fonts');
-	  this.mkdir('dev/img');
-	  this.mkdir('dev/img/_src');
+		this.mkdir('dev/css');
+		this.mkdir('dev/js');
+		this.mkdir('dev/js/_src');
+		this.mkdir('dev/fonts');
+		this.mkdir('dev/img');
+		this.mkdir('dev/img/_src');
 	},	
 
 	cssFolder: function() {
@@ -279,32 +279,30 @@ var ChimpGenerator = yeoman.generators.Base.extend({
 	},
 
 	jsLibrary: function() {
-	  if(this.jsOption == "jquery") {
-	    console.log('Installing jQuery...');
-
-	    this.bowerInstall([ 'jquery#1.*' ], { save: true }); 
-	  }
-	  if(this.jsOption == "zepto") {
-	    console.log('Installing Zepto...');
-
-	    this.bowerInstall([ 'zeptojs' ], { save: true });
-	  }
+	if(this.jsOption == "jquery") {
+		console.log('Installing jQuery...');
+		this.bowerInstall([ 'jquery#1.*' ], { save: true }); 
+	}
+	if(this.jsOption == "zepto") {
+		console.log('Installing Zepto...');
+		this.bowerInstall([ 'zeptojs' ], { save: true });
+	}
 	},
 
 	jsRespond: function() {
-	  console.log('Installing Respond...');
+		console.log('Installing Respond...');
 
-	  if(this.jsRespond) {
-	    this.bowerInstall([ 'respond' ], { save: true });
-	  } 
+		if(this.jsRespond) {
+			this.bowerInstall([ 'respond' ], { save: true });
+		} 
 	},
 
 	jsPlaceholder: function() {
-	  console.log('Installing Placeholders.js...');
+		console.log('Installing Placeholders.js...');
 
-	  if(this.jsPlaceholder) {
-	    this.bowerInstall([ 'Placeholders.js-bower' ], { save: true });
-	  }
+		if(this.jsPlaceholder) {
+			this.bowerInstall([ 'Placeholders.js-bower' ], { save: true });
+		}
 	},
 
 	jsFile: function() {
