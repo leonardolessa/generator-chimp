@@ -167,21 +167,22 @@ var ChimpGenerator = yeoman.generators.Base.extend({
 
 		this.devDependencies = (function() {
 		    var optionalDependencies = {
-		        less: '"grunt-contrib-less": "~0.8.3"',
-		        sass: '"grunt-contrib-compass": "~0.7.0"',
-		        stylus: '"grunt-contrib-stylus": "~0.11.0"',
-		        nib: '"nib": "~1.0.0"',
-		        jshint: '"grunt-contrib-jshint": "~0.8.0"',
-		        cssmin: '"grunt-contrib-cssmin": "~0.7.0"',
+		        less: '"grunt-contrib-less": "*"',
+		        sass: '"grunt-contrib-compass": "*"',
+		        stylus: '"grunt-contrib-stylus": "*"',
+		        spritesmith: '"grunt-spritesmith": "*"',
+		        nib: '"nib": "*"',
+		        jshint: '"grunt-contrib-jshint": "*"',
+		        cssmin: '"grunt-contrib-cssmin": "*"',
 		    },
 		    devDependencies = [
-		        '"grunt": "~0.4.2"',
-		        '"grunt-notify": "~0.2.16"',
-		        '"grunt-contrib-uglify": "~0.2.7"',
-		        '"grunt-contrib-watch": "~0.5.3"',
-		        '"grunt-contrib-connect": "~0.6.0"',
-		        '"grunt-contrib-copy": "~0.5.0"',
-		        '"grunt-contrib-imagemin": "~0.4.0"'
+		        '"grunt": "*"',
+		        '"grunt-notify": "*"',
+		        '"grunt-contrib-uglify": "*"',
+		        '"grunt-contrib-watch": "*"',
+		        '"grunt-contrib-connect": "*"',
+		        '"grunt-contrib-copy": "*"',
+		        '"grunt-contrib-imagemin": "*"'
 		    ];
 
 		    if(that.cssOption.indexOf('sass') !== -1) {
@@ -195,6 +196,7 @@ var ChimpGenerator = yeoman.generators.Base.extend({
 		    if(that.cssOption.indexOf('stylus') !== -1) {
 		        devDependencies.push(optionalDependencies.stylus);
 		        devDependencies.push(optionalDependencies.nib);
+		        devDependencies.push(optionalDependencies.spritesmith);
 		    }
 
 		    if(that.cssOption.indexOf('none') !== -1) {
@@ -255,7 +257,6 @@ var ChimpGenerator = yeoman.generators.Base.extend({
 		this.mkdir('dev/js/_src');
 		this.mkdir('dev/fonts');
 		this.mkdir('dev/img');
-		this.mkdir('dev/img/_src');
 	},	
 
 	cssFolder: function() {
@@ -263,6 +264,7 @@ var ChimpGenerator = yeoman.generators.Base.extend({
 
 	    if(this.cssOption == "sass") {
 	        this.mkdir('dev/css/sass');
+	        this.mkdir('dev/img/_src');
 	    }
 	    else if (this.cssOption == "less") {
 	        this.mkdir('dev/css/less');
@@ -322,6 +324,8 @@ var ChimpGenerator = yeoman.generators.Base.extend({
 	    if(this.cssOption.indexOf('stylus') !== -1) {
 	        this.copy('stylus/style.styl', 'dev/css/stylus/style.styl');
 	        this.copy('stylus/imports.styl', 'dev/css/stylus/imports.styl');
+	        this.mkdir('dist/img/sprite');
+	        this.copy('chimp.png', 'dev/img/sprite/chimp.png');
 	        this.bowerInstall([ 'nib' ], { save: true });
 	    }
 

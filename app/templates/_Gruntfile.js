@@ -174,6 +174,17 @@ module.exports = function(grunt) {
                     'dist/css/style.css': 'dev/css/stylus/style.styl',
                 }
             }
+        },
+        sprite: {
+            all: {
+                src: 'dev/img/sprite/*.png',
+                destImg: "dev/img/spritesheet.png",
+                destCSS: "dev/css/stylus/sprites.styl",
+                cssFormat: "stylus",
+                engineOpts: {
+                    'imagemagick': true
+                }
+            }
         },   <% }  if(jsHint) { %>
         jshint: {
             dev: {
@@ -281,6 +292,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify'); <% if(cssOption.indexOf('less') !== -1) { %>
     grunt.loadNpmTasks('grunt-contrib-less'); <% } if(cssOption.indexOf('sass') !== -1) { %>
     grunt.loadNpmTasks('grunt-contrib-compass'); <% } if(cssOption.indexOf('stylus') !== -1) { %>
+    grunt.loadNpmTasks('grunt-spritesmith');
     grunt.loadNpmTasks('grunt-contrib-stylus'); <% } if(jsHint) { %>
     grunt.loadNpmTasks('grunt-contrib-jshint'); <% } %>
     grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -304,6 +316,7 @@ module.exports = function(grunt) {
         [   <% if(cssOption.indexOf('less') !== -1) { %>
             'less:dev', <% } if(cssOption.indexOf('sass') !== -1) { %>
             'compass:dev', <% } if(cssOption.indexOf('stylus') !== -1) { %>
+            'sprite',
             'stylus:dev', <% } %>
             'uglify:jsdev',
             'connect',
